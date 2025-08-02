@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="title-container">
+                <h1>Romantismo no Brasil</h1>
+                <p>O Romantismo no Brasil foi um movimento literário que reuniu uma produção muito rica de textos poéticos, teatrais e romances.</p>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Modo Escuro</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+            <li><a href="#biografia-visual">Biografia Visual</a></li>
+            <li><a href="#cronologia">Cronologia</a></li>
+            <li><a href="#citacao">Citação</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="historia">
+            <h2>História</h2>
+            <p>Teve como marco inicial a publicação do livro de poemas "Suspiros poéticos e saudades", de Gonçalves de Magalhães (1811-1882), em 1836. Além dessa obra, a Revista Niterói, publicada nesse mesmo ano em Paris, também foi precursora do movimento.</p>
+            <p>O romantismo no Brasil se caracterizou, num primeiro momento, pela busca da identidade nacional e resgate das tradições e valores da cultura popular e do folclore. Temas como o indígena, a exaltação da natureza, os regionalismos e a realidade social do país são muito explorados pelos autores românticos.</p>
+            <p>Com a Independência do Brasil, em 7 de setembro de 1822, os escritores desse período buscam a autonomia da literatura, retomando diversos aspectos da cultura brasileira. Isso porque durante séculos de colonização, o Brasil sofreu forte influência dos modelos europeus, sobretudo de Portugal.</p>
+            <p>Nesse momento, os folhetins, pequenos capítulos de romances publicados nos jornais, começam a se popularizar no país, o que fez surgir um público leitor, tornando a leitura mais acessível.</p>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <ul class="curiosidades-list">
+                <li>Gonçalves Dias, um dos maiores poetas românticos, escreveu "Canção do Exílio" quando estava estudando em Portugal.</li>
+                <li>José de Alencar é considerado o fundador do romance de temática nacional no Brasil.</li>
+                <li>A obra "Iracema" de José de Alencar vendeu apenas 300 exemplares em seu primeiro ano de publicação.</li>
+                <li>Álvares de Azevedo, importante poeta romântico, faleceu aos 21 anos de idade.</li>
+                <li>Castro Alves, conhecido como "Poeta dos Escravos", teve seu poema "Navio Negreiro" publicado postumamente.</li>
+            </ul>
+        </section>
+
+        <section id="biografia-visual">
+            <h2>Biografia Visual</h2>
+            <figure>
+                <img src="imagem/iracemajosemariamedeiros.jpg" alt="Pintura representando o Romantismo no Brasil com paisagem tropical e figura indígena">
+                <figcaption>Representação artística do Romantismo brasileiro, destacando a natureza tropical e o indígena como temas centrais.</figcaption>
+            </figure>
+        </section>
+
+        <section id="cronologia">
+            <h2>Cronologia do Romantismo no Brasil</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ano</th>
+                        <th>Evento</th>
+                        <th>Autor/Obra</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1836</td>
+                        <td>Marco inicial do Romantismo</td>
+                        <td>"Suspiros Poéticos e Saudades" de Gonçalves de Magalhães</td>
+                    </tr>
+                    <tr>
+                        <td>1843</td>
+                        <td>Primeiro romance indianista</td>
+                        <td>"O Guarani" de José de Alencar</td>
+                    </tr>
+                    <tr>
+                        <td>1857</td>
+                        <td>Publicação de obra fundamental</td>
+                        <td>"Iracema" de José de Alencar</td>
+                    </tr>
+                    <tr>
+                        <td>1868</td>
+                        <td>Poesia social abolicionista</td>
+                        <td>"Navio Negreiro" de Castro Alves</td>
+                    </tr>
+                    <tr>
+                        <td>1881</td>
+                        <td>Transição para o Realismo</td>
+                        <td>"Memórias Póstumas de Brás Cubas" de Machado de Assis</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="citacao">
+            <blockquote>
+                "O Romantismo brasileiro foi a primeira manifestação artística que buscou verdadeiramente uma identidade nacional, distanciando-se dos modelos europeus e valorizando nossas paisagens, nossa gente e nossas histórias."
+                <cite>— TodaMatéria: Romantismo no Brasil</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <main>
+        <section id="referencias">
+            <h2>Referencias</h2>
+            <ol>
+                <li><a href="https://www.todamateria.com.br/romantismo-no-brasil/">TodaMatéria: Romantismo no Brasil</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última atualização em: 02/08/2025</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        // Verificar preferência do usuário
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️ Modo Claro';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = '☀️ Modo Claro';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = '🌙 Modo Escuro';
+            }
+        });
+    </script>
+</body>
+</html>
